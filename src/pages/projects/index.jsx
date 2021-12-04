@@ -19,6 +19,7 @@ export default function Projects({ data }) {
               <OneProject
                 title={project.frontmatter.title}
                 stack={project.frontmatter.stack}
+                fluid={project.frontmatter.thumb.childImageSharp.fluid}
               />
             </Link>
           ))}
@@ -33,7 +34,7 @@ export default function Projects({ data }) {
 export const query = graphql`
   query ProjectsPage {
     projects: allMarkdownRemark(
-      sort: { fields: frontmatter___date, order: ASC }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       nodes {
         id
@@ -42,6 +43,13 @@ export const query = graphql`
           slug
           stack
           title
+          thumb {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
