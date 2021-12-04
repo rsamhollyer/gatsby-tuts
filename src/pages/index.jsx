@@ -16,6 +16,7 @@ export default function Home() {
             My Portfolios
           </Link>
         </div>
+        <img src="/banner.png" alt="banner" />
       </section>
     </Layouts>
   )
