@@ -21,5 +21,6 @@ module.exports = {
     title: 'Stuff and Junk',
     description: 'Stuff and Junk is a site about stuff and junk.',
     copyright: '© 2022 Stuff and Junk',
+    contact: 'Under your couch cover',
   },
 }
