@@ -29,7 +29,7 @@ export default function Projects({ data }) {
   )
 }
 
-// EXPORT PAGE QUERY
+// Export query
 export const query = graphql`
   query ProjectsPage {
     projects: allMarkdownRemark(

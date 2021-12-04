@@ -1,10 +1,12 @@
-import { Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
 import React from 'react'
 import Layouts from '../components/Layouts'
 import * as styles from '../styles/home.module.less'
 
-export default function Home() {
-  // const { title, description } = data.site.siteMetadata
+export default function Home({ data }) {
+  const { fluid } = data.file.childrenImageSharp[0]
+  console.log(data)
   return (
     <Layouts>
       <section className={styles.header}>
@@ -16,25 +18,20 @@ export default function Home() {
             My Portfolios
           </Link>
         </div>
-        <img src="/banner.png" alt="banner" />
-        {/* <p>
-          {title} - {description}
-        </p> */}
+        <Img fluid={fluid} />
       </section>
     </Layouts>
   )
 }
 
-// export const query = graphql`
-//   query MyQuery {
-//     site {
-//       host
-//       port
-//       siteMetadata {
-//         copyright
-//         description
-//         title
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query Banner {
+    file(relativePath: { eq: "banner.png" }) {
+      childrenImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
