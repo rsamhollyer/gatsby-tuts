@@ -6,7 +6,7 @@ export default function Layouts({ children }) {
     <div className="layouts">
       <Nav />
       <div className="content">{children}</div>
-      <footer>&copy</footer>
+      <footer>&#169; 2022</footer>
     </div>
   )
 }
