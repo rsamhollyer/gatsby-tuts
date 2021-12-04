@@ -1,12 +1,10 @@
 {
-    "extends": [ "wesbos" ],
-    "rules":{
-        "no-plusplus":"off",
-        "no-use-before-define":"off",
-        "react/prop-types":"off"
+    "extends": [
+        "wesbos"
+    ],
+    "rules": {
+        "no-plusplus": "off",
+        "no-use-before-define": "off",
+        "react/prop-types": "off"
     }
-
-
-
-
-  }
+}
