@@ -12,7 +12,10 @@ export default function ProjectDetails() {
         <div className={styles.featured}>
           <Img fluid />
         </div>
-        <div className={styles.html} dangerouslySetInnerHTML />
+        <div
+          className={styles.html}
+          //   dangerouslySetInnerHTML={{ __html: html }}
+        />
       </div>
     </Layouts>
   )
