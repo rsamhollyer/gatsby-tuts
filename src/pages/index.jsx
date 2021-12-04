@@ -1,4 +1,4 @@
-import { graphql, Link } from 'gatsby'
+import { Link } from 'gatsby'
 import React from 'react'
 import Layouts from '../components/Layouts'
 import * as styles from '../styles/home.module.less'
@@ -25,16 +25,16 @@ export default function Home() {
   )
 }
 
-export const query = graphql`
-  query MyQuery {
-    site {
-      host
-      port
-      siteMetadata {
-        copyright
-        description
-        title
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query MyQuery {
+//     site {
+//       host
+//       port
+//       siteMetadata {
+//         copyright
+//         description
+//         title
+//       }
+//     }
+//   }
+// `
