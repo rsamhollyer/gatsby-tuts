@@ -1,13 +1,13 @@
 import React from 'react'
 import Layouts from '../../components/Layouts'
-import * as styles from '../../styles/project.modules.less'
+import * as styles from '../../styles/project.module.less'
 
 export default function Projects() {
   return (
     <Layouts>
       <div className={styles.portfolio}>
-        <h1>Projects</h1>
-        <h2>Stuff Junk and Crap</h2>
+        <h2>Projects</h2>
+        <h3>Stuff Junk and Crap</h3>
       </div>
     </Layouts>
   )
