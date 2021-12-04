@@ -7,7 +7,10 @@ export default function Layouts({ children }) {
     <div className="layout">
       <Nav />
       <div className="content">{children}</div>
-      <footer>&#169; 2022</footer>
+      <footer>
+        <p>From the Desk of Sam Hollyer and the Youtube hive mind</p>
+        <p>&#169;2022</p>
+      </footer>
     </div>
   )
 }

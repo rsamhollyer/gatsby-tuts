@@ -1,10 +1,10 @@
-import { Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import React from 'react'
 import Layouts from '../components/Layouts'
 import * as styles from '../styles/home.module.less'
 
-console.log(styles)
 export default function Home() {
+  // const { title, description } = data.site.siteMetadata
   return (
     <Layouts>
       <section className={styles.header}>
@@ -17,7 +17,24 @@ export default function Home() {
           </Link>
         </div>
         <img src="/banner.png" alt="banner" />
+        {/* <p>
+          {title} - {description}
+        </p> */}
       </section>
     </Layouts>
   )
 }
+
+export const query = graphql`
+  query MyQuery {
+    site {
+      host
+      port
+      siteMetadata {
+        copyright
+        description
+        title
+      }
+    }
+  }
+`
