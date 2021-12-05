@@ -6,7 +6,6 @@ import * as styles from '../styles/home.module.less'
 
 export default function Home({ data }) {
   const { fluid } = data.file.childrenImageSharp[0]
-  console.log(data)
   return (
     <Layouts>
       <section className={styles.header}>
